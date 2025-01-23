@@ -1,0 +1,42 @@
+/* Basic Styles for Portfolio */
+.photo-grid { /* Changed class name here */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+  
+  .photo-grid-images { /* Changed class name here */
+    position: relative;
+    width: 100%;
+    overflow: hidden; /* Hide images that are not visible by default */
+  }
+  
+  .photo-grid-images img { /* Changed class name here */
+    width: 100%;
+    position: absolute; /* Position images on top of each other */
+    top: 0;
+    left: 0;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0; /* Hide all images initially */
+  }
+  
+  .photo-grid-images img:first-child { /* Changed class name here */
+    opacity: 1; /* Show the first image by default */
+  }
+  
+  .photo-grid-images:hover img { /* Changed class name here */
+    opacity: 1; /* Show all images when hovered */
+  }
+  
+  .photo-grid-images:hover img:nth-child(1) { /* Changed class name here */
+    opacity: 1; /* Ensure the first image is visible when hovered */
+  }
+  
+  .photo-grid-images:hover img:nth-child(2) { /* Changed class name here */
+    opacity: 1; /* Show the second image when hovered */
+  }
+  
+  .photo-grid-images:hover img:nth-child(3) { /* Changed class name here */
+    opacity: 1; /* Show the third image when hovered */
+  }
+  

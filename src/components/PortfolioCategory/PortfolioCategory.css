@@ -1,0 +1,118 @@
+/* src/components/PortfolioCategory/PortfolioCategory.css */
+.portfolio-category {
+  position: relative;
+  width: 100%; /* Default width */
+  height: 300px; /* Default height */
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center; /* Ensure the content is horizontally centered */
+  align-items: center; /* Ensure the content is vertically centered */
+  transition: max-width 0.3s ease-in-out; /* Smooth transition for expanding the width */
+  left: 50%; /* Position the container relative to its original position */
+  transform: translateX(-50%); /* Ensure it stays centered by shifting it 50% to the left */
+  max-width: 100%; /* Initially, max-width is 100% */
+}
+
+.portfolio-category:hover {
+  width: 150%;
+  max-width: 150%; /* Increase max-width by 50% on hover */
+}
+
+.category-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Adjust the styling of the category name */
+.category-content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: transform 0.3s ease-in-out; /* Smooth transition for scaling */
+}
+
+/* Preview images container */
+.category-content .preview-images {
+  display: flex;
+  justify-content: center; /* Center the images horizontally */
+  align-items: center; /* Center the images vertically */
+  gap: 10px; /* Add space between the images */
+  position: relative;
+}
+
+/* Image style */
+.category-content .preview-images img {
+  width: 136.5px; /* Set a fixed size for the thumbnail images */
+  height: 204.8px; /* Fixed height to maintain aspect ratio */
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Ensure the first image is centered and its size is fixed */
+.category-content .preview-images img:first-child {
+  width: 136.5px; /* Default size for the first image */
+  height: 204.8px;
+  transform: scale(1); /* Default size */
+  position: absolute; /* Absolutely position the first image in the center */
+  top: 0%; /* Center vertically */
+  left: 25%; /* Center horizontally */
+}
+
+/* Enlarge the first image and show the other images on hover */
+.portfolio-category:hover .category-content .preview-images img:first-child {
+  transform: scale(1.1); /* Expand the first image */
+}
+
+/* Initially hide the second and third images */
+.category-content .preview-images img:nth-child(2),
+.category-content .preview-images img:nth-child(3) {
+  opacity: 0; /* Initially hide the second and third images */
+  transform: scale(1); /* Keep them at normal size initially */
+}
+
+/* On hover, reveal the second and third images and position them on the sides of the first image */
+.portfolio-category:hover .category-content .preview-images img:nth-child(2) {
+  opacity: 1; /* Show the second image */
+  transform: translateX(-100px); /* Move the second image to the left */
+}
+
+.portfolio-category:hover .category-content .preview-images img:nth-child(3) {
+  opacity: 1; /* Show the third image */
+  transform: translateX(100px); /* Move the third image to the right */
+}
+
+/* Enlarge the text (h2) on hover */
+.portfolio-category:hover .category-content h2 {
+  color: white;
+  transform: scale(1.2); /* Enlarge the category name */
+}
+
+/* Hover circle effect */
+.hover-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.5s ease, height 0.5s ease;
+  z-index: 1;
+}
+
+.portfolio-category:hover .hover-circle {
+  width: 300%;
+  height: 300%;
+}
