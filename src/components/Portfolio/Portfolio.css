@@ -1,18 +1,62 @@
+/* General styling for .portfolio */
 .portfolio {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.portfolio-title-gif {
+  display: block;
+  max-width: 100%; /* Ensures it fits the container */
+  height: auto; /* Maintains aspect ratio */
+  margin: 0 auto 30px; /* Center the GIF and add spacing */
+}
+
+/* Styling for the h1 title in .portfolio */
+.portfolio > h1 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: black;
+}
+
+/* Styling for the grid inside .portfolio */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  animation: none; /* Prevent animation inheritance */
+}
+
+/* Target ONLY h2 directly under .portfolio */
+.portfolio > h2 {
+  position: relative;
+  font-size: 2rem; /* Adjust as needed */
+  text-align: center;
+  overflow: hidden; /* Ensures the animation stays within bounds */
+  color: white; /* Color specific to this h2 */
+  margin-bottom: 30px; /* Add spacing for separation */
+}
+
+/* Scoped animation for the black background */
+.portfolio > h2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%; /* Start off-screen */
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, black 50%, rgba(0, 0, 0, 0) 100%);
+  z-index: -1; /* Ensure it stays behind the text */
+  animation: portfolio-h2-black-bg 2s linear infinite;
+}
+
+/* Keyframe animation scoped specifically for the h2 background */
+@keyframes portfolio-h2-black-bg {
+  0% {
+    left: -100%;
   }
-  
-  .portfolio h1 {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
+  100% {
+    left: 100%;
   }
-  
-  .portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-  }
-  
+}

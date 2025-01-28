@@ -3,8 +3,8 @@ import React from 'react';
 const Home = () => {
   return (
     <div>
-      <h1>Welcome to My Photography Portfolio</h1>
-      <p>Explore my work and book your session today!</p>
+      <h1>Welcome to My Portfolio</h1>
+      <p>Explore my works and contact me today!</p>
     </div>
   );
 };
