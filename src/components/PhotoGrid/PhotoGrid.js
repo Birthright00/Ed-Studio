@@ -5,8 +5,10 @@ import './PhotoGrid.css';
 const PhotoGrid = ({ photos }) => {
   return (
     <div className="photo-grid">
-      {photos.map((photo) => (
-        <PhotoCard key={photo.id} photo={photo} />
+      {photos.map((photo, index) => (
+        <div key={photo.id} className="stagger-item">
+          <PhotoCard photo={photo} />
+        </div>
       ))}
     </div>
   );

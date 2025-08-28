@@ -5,10 +5,10 @@ import Home from "./components/Home";
 import Portfolio from "./components/Portfolio/Portfolio";
 import About from "./components/About";
 import Contact from "./components/Contact";
-import BookingCalendar from "./components/BookingCalender";
-import "./styles/global.css"; // Optional global styles
+import "./styles/atmospheric-photography.css"; // Atmospheric photography styles
 import "./components/LoadingBar/loading-bar.css";
 import "./components/LoadingBar/loading-bar.js";
+import ScrollAnimation from "./components/ScrollAnimation/ScrollAnimation";
 
 function App() {
   const [loading, setLoading] = useState(true); // State to track loading
@@ -41,17 +41,20 @@ function App() {
         </div>
       ) : (
         <>
+          {/* Atmospheric background */}
+          <div className="atmospheric-bg"></div>
+          {/* Scroll animation handler */}
+          <ScrollAnimation />
           {/* Main app layout */}
           <Header />
-          <div className="container mt-4">
+          <main>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/portfolio" element={<Portfolio />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="/calendar" element={<BookingCalendar />} />
             </Routes>
-          </div>
+          </main>
         </>
       )}
     </Router>

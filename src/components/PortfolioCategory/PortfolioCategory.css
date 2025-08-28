@@ -1,118 +1,211 @@
-/* src/components/PortfolioCategory/PortfolioCategory.css */
+/* Atmospheric Portfolio Category - Bryan Minear Inspired */
 .portfolio-category {
   position: relative;
-  width: 100%; /* Default width */
-  height: 300px; /* Default height */
+  width: 100%;
+  height: 400px;
   overflow: hidden;
-  border-radius: 10px;
   cursor: pointer;
-  display: flex;
-  justify-content: center; /* Ensure the content is horizontally centered */
-  align-items: center; /* Ensure the content is vertically centered */
-  transition: max-width 0.3s ease-in-out; /* Smooth transition for expanding the width */
-  left: 50%; /* Position the container relative to its original position */
-  transform: translateX(-50%); /* Ensure it stays centered by shifting it 50% to the left */
-  max-width: 100%; /* Initially, max-width is 100% */
+  background: #111;
+  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border: 1px solid #222;
 }
 
 .portfolio-category:hover {
-  width: 150%;
-  max-width: 150%; /* Increase max-width by 50% on hover */
+  transform: scale(1.02);
+  border-color: #333;
 }
 
 .category-content {
   position: relative;
-  z-index: 2;
-  text-align: center;
-  color: black;
+  z-index: 5;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
-}
-
-/* Adjust the styling of the category name */
-.category-content h2 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  transition: transform 0.3s ease-in-out; /* Smooth transition for scaling */
-}
-
-/* Preview images container */
-.category-content .preview-images {
-  display: flex;
-  justify-content: center; /* Center the images horizontally */
-  align-items: center; /* Center the images vertically */
-  gap: 10px; /* Add space between the images */
-  position: relative;
-}
-
-/* Image style */
-.category-content .preview-images img {
-  width: 136.5px; /* Set a fixed size for the thumbnail images */
-  height: 204.8px; /* Fixed height to maintain aspect ratio */
-  object-fit: cover;
-  border-radius: 10px;
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-}
-
-/* Ensure the first image is centered and its size is fixed */
-.category-content .preview-images img:first-child {
-  width: 136.5px; /* Default size for the first image */
-  height: 204.8px;
-  transform: scale(1); /* Default size */
-  position: absolute; /* Absolutely position the first image in the center */
-  top: 0%; /* Center vertically */
-  left: 25%; /* Center horizontally */
-}
-
-/* Enlarge the first image and show the other images on hover */
-.portfolio-category:hover .category-content .preview-images img:first-child {
-  transform: scale(1.1); /* Expand the first image */
-}
-
-/* Initially hide the second and third images */
-.category-content .preview-images img:nth-child(2),
-.category-content .preview-images img:nth-child(3) {
-  opacity: 0; /* Initially hide the second and third images */
-  transform: scale(1); /* Keep them at normal size initially */
-}
-
-/* On hover, reveal the second and third images and position them on the sides of the first image */
-.portfolio-category:hover .category-content .preview-images img:nth-child(2) {
-  opacity: 1; /* Show the second image */
-  transform: translateX(-100px); /* Move the second image to the left */
-}
-
-.portfolio-category:hover .category-content .preview-images img:nth-child(3) {
-  opacity: 1; /* Show the third image */
-  transform: translateX(100px); /* Move the third image to the right */
-}
-
-/* Enlarge the text (h2) on hover */
-.portfolio-category:hover .category-content h2 {
+  text-align: center;
   color: white;
-  transform: scale(1.2); /* Enlarge the category name */
+  transition: all 0.6s ease;
 }
 
-/* Hover circle effect */
+.category-content h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #ffffff;
+  margin-bottom: 2rem;
+  transition: all 0.6s ease;
+  position: relative;
+  z-index: 10;
+}
+
+.portfolio-category:hover .category-content h2 {
+  transform: scale(1.1);
+  letter-spacing: 0.3em;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+/* Image Gallery Layout */
+.preview-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  height: 250px;
+}
+
+.preview-images img {
+  width: 120px;
+  height: 180px;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  filter: brightness(0.8) contrast(1.1);
+  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: absolute;
+}
+
+/* Image positioning and hover effects */
+.preview-images img:first-child {
+  z-index: 3;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.preview-images img:nth-child(2),
+.preview-images img:nth-child(3) {
+  opacity: 0.7;
+  z-index: 2;
+}
+
+.portfolio-category:hover .preview-images img:first-child {
+  transform: translateX(0) scale(1.05);
+  border-color: rgba(255, 255, 255, 0.6);
+  filter: brightness(1) contrast(1.2);
+}
+
+.portfolio-category:hover .preview-images img:nth-child(2) {
+  opacity: 1;
+  transform: translateX(-80px) scale(0.95);
+  border-color: rgba(255, 255, 255, 0.4);
+  filter: brightness(0.9) contrast(1.1);
+}
+
+.portfolio-category:hover .preview-images img:nth-child(3) {
+  opacity: 1;
+  transform: translateX(80px) scale(0.95);
+  border-color: rgba(255, 255, 255, 0.4);
+  filter: brightness(0.9) contrast(1.1);
+}
+
+/* Atmospheric Overlay */
 .hover-circle {
   position: absolute;
   top: 50%;
   left: 50%;
   width: 0;
   height: 0;
-  background: rgba(0, 0, 0, 0.8);
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.6) 30%,
+    rgba(0, 0, 0, 0.4) 60%,
+    transparent 100%
+  );
   border-radius: 50%;
   transform: translate(-50%, -50%);
-  transition: width 0.5s ease, height 0.5s ease;
-  z-index: 1;
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  z-index: 2;
 }
 
 .portfolio-category:hover .hover-circle {
-  width: 300%;
-  height: 300%;
+  width: 500%;
+  height: 500%;
+}
+
+/* Background texture overlay */
+.portfolio-category::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    linear-gradient(45deg, transparent 25%, rgba(255, 255, 255, 0.02) 25%),
+    linear-gradient(-45deg, transparent 25%, rgba(255, 255, 255, 0.01) 25%);
+  background-size: 20px 20px;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  z-index: 1;
+}
+
+.portfolio-category:hover::before {
+  opacity: 1;
+}
+
+/* Subtle glow effect */
+.portfolio-category::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, 
+    rgba(255, 255, 255, 0.1) 0%, 
+    transparent 50%, 
+    rgba(255, 255, 255, 0.05) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  z-index: 0;
+}
+
+.portfolio-category:hover::after {
+  opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .portfolio-category {
+    height: 350px;
+  }
+  
+  .preview-images {
+    height: 200px;
+  }
+  
+  .preview-images img {
+    width: 100px;
+    height: 150px;
+  }
+  
+  .portfolio-category:hover .preview-images img:nth-child(2) {
+    transform: translateX(-60px) scale(0.9);
+  }
+  
+  .portfolio-category:hover .preview-images img:nth-child(3) {
+    transform: translateX(60px) scale(0.9);
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-category {
+    height: 300px;
+  }
+  
+  .preview-images img {
+    width: 80px;
+    height: 120px;
+  }
+  
+  .portfolio-category:hover .preview-images img:nth-child(2) {
+    transform: translateX(-50px) scale(0.85);
+  }
+  
+  .portfolio-category:hover .preview-images img:nth-child(3) {
+    transform: translateX(50px) scale(0.85);
+  }
 }

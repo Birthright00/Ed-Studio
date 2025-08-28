@@ -1,42 +1,65 @@
-/* Basic Styles for Portfolio */
-.photo-grid { /* Changed class name here */
+/* Clean Photography Portfolio Grid */
+.photo-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem 1rem;
+    background: #ffffff;
+    position: relative;
+    margin: 1rem 0;
   }
   
-  .photo-grid-images { /* Changed class name here */
+  .photo-grid-images {
     position: relative;
     width: 100%;
-    overflow: hidden; /* Hide images that are not visible by default */
+    overflow: hidden;
+    border-radius: 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
   
-  .photo-grid-images img { /* Changed class name here */
+  .photo-grid-images:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  }
+  
+  .photo-grid-images img {
     width: 100%;
-    position: absolute; /* Position images on top of each other */
+    height: 250px;
+    object-fit: cover;
+    position: absolute;
     top: 0;
     left: 0;
-    transition: opacity 0.3s ease-in-out;
-    opacity: 0; /* Hide all images initially */
+    transition: all 0.3s ease;
+    opacity: 0;
   }
   
-  .photo-grid-images img:first-child { /* Changed class name here */
-    opacity: 1; /* Show the first image by default */
+  .photo-grid-images img:first-child {
+    opacity: 1;
+    z-index: 3;
   }
   
-  .photo-grid-images:hover img { /* Changed class name here */
-    opacity: 1; /* Show all images when hovered */
+  .photo-grid-images:hover img {
+    opacity: 1;
+    transform: scale(1.05);
   }
   
-  .photo-grid-images:hover img:nth-child(1) { /* Changed class name here */
-    opacity: 1; /* Ensure the first image is visible when hovered */
+  .photo-grid-images:hover img:nth-child(1) {
+    opacity: 1;
+    z-index: 3;
+    transform: scale(1.05) translateZ(0);
   }
   
-  .photo-grid-images:hover img:nth-child(2) { /* Changed class name here */
-    opacity: 1; /* Show the second image when hovered */
+  .photo-grid-images:hover img:nth-child(2) {
+    opacity: 0.8;
+    z-index: 2;
+    transform: scale(1.02) rotate(1deg);
   }
   
-  .photo-grid-images:hover img:nth-child(3) { /* Changed class name here */
-    opacity: 1; /* Show the third image when hovered */
+  .photo-grid-images:hover img:nth-child(3) {
+    opacity: 0.6;
+    z-index: 1;
+    transform: scale(1.01) rotate(-1deg);
   }
+  
   

@@ -1,32 +1,42 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <div className="container-fluid">
-        <Link className="navbar-brand" to="/">Ed Studio</Link>
-        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav">
-            <li className="nav-item">
-              <Link className="nav-link" to="/">Home</Link>
+    <header className={`minimal-nav ${scrolled ? 'scrolled' : ''}`}>
+      <div className="nav-content">
+        <Link to="/" className="logo-minimal">
+          Ed Studio
+        </Link>
+        <nav>
+          <ul className="nav-links-minimal">
+            <li>
+              <Link to="/" className="nav-link-minimal">Home</Link>
             </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/portfolio">Portfolio</Link>
+            <li>
+              <Link to="/portfolio" className="nav-link-minimal">Portfolio</Link>
             </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/about">About Me</Link>
+            <li>
+              <Link to="/about" className="nav-link-minimal">About</Link>
             </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/contact">Contact</Link>
+            <li>
+              <Link to="/contact" className="nav-link-minimal">Contact</Link>
             </li>
           </ul>
-        </div>
+        </nav>
       </div>
-    </nav>
+    </header>
   );
 };
 

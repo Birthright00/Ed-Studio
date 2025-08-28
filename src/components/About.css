@@ -1,0 +1,80 @@
+/* Modern About Page Styles */
+
+.about-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-content h1 {
+  margin-bottom: 2rem;
+  opacity: 0;
+}
+
+.about-content .text-large {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #333;
+  margin-bottom: 2rem;
+  opacity: 0;
+}
+
+.about-content p {
+  margin-bottom: 1.5rem;
+  opacity: 0;
+}
+
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+  margin-top: 4rem;
+  opacity: 0;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat h3 {
+  font-size: 3rem;
+  font-weight: 200;
+  color: #0a0a0a;
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+.stat p {
+  font-size: 1rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-content .text-large {
+    font-size: 1.25rem;
+  }
+  
+  .about-stats {
+    margin-top: 3rem;
+    gap: 1.5rem;
+  }
+  
+  .stat h3 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-stats {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .stat h3 {
+    font-size: 2rem;
+  }
+}
