@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import Header from "./components/Header";
 import Home from "./components/Home";
 import Portfolio from "./components/Portfolio/Portfolio";
@@ -9,6 +9,16 @@ import "./styles/atmospheric-photography.css"; // Atmospheric photography styles
 import "./components/LoadingBar/loading-bar.css";
 import "./components/LoadingBar/loading-bar.js";
 import ScrollAnimation from "./components/ScrollAnimation/ScrollAnimation";
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
 
 function App() {
   const [loading, setLoading] = useState(true); // State to track loading
@@ -43,6 +53,8 @@ function App() {
         <>
           {/* Atmospheric background */}
           <div className="atmospheric-bg"></div>
+          {/* Scroll to top on route change */}
+          <ScrollToTop />
           {/* Scroll animation handler */}
           <ScrollAnimation />
           {/* Main app layout */}
