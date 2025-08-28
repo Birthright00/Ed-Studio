@@ -17,7 +17,7 @@ const About = () => {
               lineHeight: '1.8'
             }}>
               Ed Studio represents a vision of photography that goes beyond mere documentation. 
-              We believe in the power of light, shadow, and human form to create images that 
+              Belief in the power of light, shadow, and human intersect and form to create images that 
               resonate on a deeper level.
             </p>
           </div>
@@ -34,7 +34,7 @@ const About = () => {
             <div style={{maxWidth: '900px', margin: '0 auto'}}>
               <p className="fade-in fade-in-delay-1 mb-4" style={{fontSize: '1.1rem', lineHeight: '1.7'}}>
                 Every session begins with understanding the subject's story, their vision, and the message they want to convey. 
-                Through careful attention to lighting, composition, and atmosphere, I craft images that capture not just 
+                Through careful attention to lighting, composition, and atmosphere, I want to craft images that capture not just 
                 appearance, but essence.
               </p>
               <p className="fade-in fade-in-delay-2 mb-4" style={{fontSize: '1.1rem', lineHeight: '1.7'}}>
