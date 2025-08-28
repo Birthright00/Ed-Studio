@@ -29,16 +29,16 @@ const About = () => {
         <div className="container">
           <div className="text-center">
             <h2 className="fade-in mb-4">
-              Our Approach
+              My Approach
             </h2>
             <div style={{maxWidth: '900px', margin: '0 auto'}}>
               <p className="fade-in fade-in-delay-1 mb-4" style={{fontSize: '1.1rem', lineHeight: '1.7'}}>
                 Every session begins with understanding the subject's story, their vision, and the message they want to convey. 
-                Through careful attention to lighting, composition, and atmosphere, we craft images that capture not just 
+                Through careful attention to lighting, composition, and atmosphere, I craft images that capture not just 
                 appearance, but essence.
               </p>
               <p className="fade-in fade-in-delay-2 mb-4" style={{fontSize: '1.1rem', lineHeight: '1.7'}}>
-                Our specialization in physique, modeling, and cosplay photography stems from a deep appreciation 
+                My specialization in physique, modeling, and cosplay photography stems from a deep appreciation 
                 for the artistry in each discipline. Whether showcasing the dedication of an athlete, 
                 the elegance of a model, or the creativity of a cosplayer, each image tells a unique story.
               </p>
@@ -53,7 +53,7 @@ const About = () => {
           <div className="image-grid grid-three">
             <div className="text-center fade-in">
               <h3 style={{fontSize: '4rem', fontWeight: '200', marginBottom: '1rem', color: '#ffffff'}}>
-                500+
+                30+
               </h3>
               <p style={{textTransform: 'uppercase', letterSpacing: '0.1em', fontSize: '1rem'}}>
                 Sessions Completed
@@ -69,7 +69,7 @@ const About = () => {
             </div>
             <div className="text-center fade-in fade-in-delay-2">
               <h3 style={{fontSize: '4rem', fontWeight: '200', marginBottom: '1rem', color: '#ffffff'}}>
-                5+
+                2+
               </h3>
               <p style={{textTransform: 'uppercase', letterSpacing: '0.1em', fontSize: '1rem'}}>
                 Years Experience
