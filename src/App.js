@@ -47,9 +47,11 @@ function App() {
     <Router>
       {/* Show loading bar while loading */}
       {loading ? (
-        <div id="loading-container">
-          <div id="loading-bar" className="ldBar label-center"></div>
-        </div>
+        <ImageProtection>
+          <div id="loading-container">
+            <div id="loading-bar" className="ldBar label-center"></div>
+          </div>
+        </ImageProtection>
       ) : (
         <ImageProtection>
           {/* Atmospheric background */}
