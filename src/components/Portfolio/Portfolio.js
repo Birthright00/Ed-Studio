@@ -80,6 +80,7 @@ const Portfolio = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
 
   const handleCategorySelect = (category) => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     setSelectedCategory(category);
   };
 
