@@ -1,4 +1,5 @@
 import React from 'react';
+import AnimatedCounter from './AnimatedCounter';
 
 const About = () => {
   return (
@@ -52,25 +53,19 @@ const About = () => {
         <div className="container">
           <div className="image-grid grid-three">
             <div className="text-center fade-in">
-              <h3 style={{fontSize: '4rem', fontWeight: '200', marginBottom: '1rem', color: '#ffffff'}}>
-                30+
-              </h3>
+              <AnimatedCounter end={30} suffix="+" duration={2500} />
               <p style={{textTransform: 'uppercase', letterSpacing: '0.1em', fontSize: '1rem'}}>
                 Sessions Completed
               </p>
             </div>
             <div className="text-center fade-in fade-in-delay-1">
-              <h3 style={{fontSize: '4rem', fontWeight: '200', marginBottom: '1rem', color: '#ffffff'}}>
-                3
-              </h3>
+              <AnimatedCounter end={3} duration={1500} />
               <p style={{textTransform: 'uppercase', letterSpacing: '0.1em', fontSize: '1rem'}}>
                 Specializations
               </p>
             </div>
             <div className="text-center fade-in fade-in-delay-2">
-              <h3 style={{fontSize: '4rem', fontWeight: '200', marginBottom: '1rem', color: '#ffffff'}}>
-                2+
-              </h3>
+              <AnimatedCounter end={2} suffix="+" duration={2000} />
               <p style={{textTransform: 'uppercase', letterSpacing: '0.1em', fontSize: '1rem'}}>
                 Years Experience
               </p>
