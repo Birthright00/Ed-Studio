@@ -51,15 +51,15 @@ const photocategories = [
     ],
   },
   {
-    name: 'Event',
+    name: 'Sports',
     images: [
-      '/images/event/event1.jpg',
-      '/images/event/event2.jpg',
-      '/images/event/event3.jpg',
-      '/images/event/event4.jpg',
-      '/images/event/event5.jpg',
-      '/images/event/event6.jpg',
-      '/images/event/event7.jpg',
+      '/images/sports/sports1.jpg',
+      '/images/sports/sports2.jpg',
+      '/images/sports/sports3.jpg',
+      '/images/sports/sports4.jpg',
+      '/images/sports/sports5.jpg',
+      '/images/sports/sports6.jpg',
+      '/images/sports/sports7.jpg',
     ],
   },
   {
