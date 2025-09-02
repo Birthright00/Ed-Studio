@@ -16,9 +16,10 @@ const Contact = () => {
         process.env.REACT_APP_EMAILJS_SERVICE_ID,
         process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
         {
-          from_name: formData.name,
-          from_email: formData.email,
+          title: `New Contact from ${formData.name}`,
+          name: formData.name,
           message: formData.message,
+          time: new Date().toLocaleString(),
           to_email: 'tang.edward.business@gmail.com'
         },
         process.env.REACT_APP_EMAILJS_PUBLIC_KEY
