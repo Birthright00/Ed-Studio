@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
 
 const Contact = () => {
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [formData, setFormData] = useState({ name: '', email: '', phone: '', message: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState('');
 
@@ -18,6 +18,8 @@ const Contact = () => {
         {
           title: `New Contact from ${formData.name}`,
           name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
           message: formData.message,
           time: new Date().toLocaleString(),
           to_email: 'tang.edward.business@gmail.com'
@@ -26,7 +28,7 @@ const Contact = () => {
       );
 
       setSubmitStatus('Message sent successfully!');
-      setFormData({ name: '', email: '', message: '' });
+      setFormData({ name: '', email: '', phone: '', message: '' });
     } catch (error) {
       setSubmitStatus('Failed to send message. Please try again.');
       console.error('EmailJS error:', error);
@@ -142,6 +144,36 @@ const Contact = () => {
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   required
+                  style={{
+                    width: '100%',
+                    padding: '1rem',
+                    background: 'transparent',
+                    border: '1px solid #444',
+                    color: '#ffffff',
+                    fontSize: '1rem',
+                    fontFamily: 'inherit',
+                    transition: 'border-color 0.3s ease'
+                  }}
+                  onFocus={(e) => e.target.style.borderColor = '#666'}
+                  onBlur={(e) => e.target.style.borderColor = '#444'}
+                />
+              </div>
+              
+              <div style={{marginBottom: '2rem'}}>
+                <label style={{
+                  display: 'block',
+                  marginBottom: '0.5rem',
+                  color: '#cccccc',
+                  fontSize: '1rem',
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.1em'
+                }}>
+                  Phone Number
+                </label>
+                <input
+                  type="tel"
+                  value={formData.phone}
+                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                   style={{
                     width: '100%',
                     padding: '1rem',
