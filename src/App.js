@@ -5,6 +5,7 @@ import Home from "./components/Home";
 import Portfolio from "./components/Portfolio/Portfolio";
 import About from "./components/About";
 import Contact from "./components/Contact";
+import ImageProtection from "./components/ImageProtection";
 import "./styles/atmospheric-photography.css"; // Atmospheric photography styles
 import "./components/LoadingBar/loading-bar.css";
 import "./components/LoadingBar/loading-bar.js";
@@ -50,7 +51,7 @@ function App() {
           <div id="loading-bar" className="ldBar label-center"></div>
         </div>
       ) : (
-        <>
+        <ImageProtection>
           {/* Atmospheric background */}
           <div className="atmospheric-bg"></div>
           {/* Scroll to top on route change */}
@@ -67,7 +68,7 @@ function App() {
               <Route path="/contact" element={<Contact />} />
             </Routes>
           </main>
-        </>
+        </ImageProtection>
       )}
     </Router>
   );

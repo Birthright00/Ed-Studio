@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ProtectedImage from './ProtectedImage';
 
 const Home = () => {
   return (
@@ -9,7 +10,7 @@ const Home = () => {
         <div className="container">
           <div className="text-center">
             <h1 className="fade-in">Ed Studio</h1>
-            <p
+            <pI
               className="fade-in fade-in-delay-1 mt-2"
               style={{
                 fontSize: '1.2rem',
@@ -18,7 +19,33 @@ const Home = () => {
               }}
             >
               Photography
-            </p>
+            </pI>
+
+            {/* Auto-scrolling Portfolio Banner */}
+            <section className="portfolio-banner-section">
+              <div className="portfolio-banner-container">
+                <div className="portfolio-banner-track">
+                  <ProtectedImage src="/images/landscape/physique1-landscape.jpg" alt="Portfolio Work" className="banner-image" />
+                  <ProtectedImage src="/images/landscape/modeling1-landscape.jpg" alt="Portfolio Work" className="banner-image" />
+                  <ProtectedImage src="/images/landscape/cosplay1-landscape.jpg" alt="Portfolio Work" className="banner-image" />
+                  <ProtectedImage src="/images/landscape/physique2-landscape.jpg" alt="Portfolio Work" className="banner-image" />
+                  <ProtectedImage src="/images/landscape/modeling2-landscape.jpg" alt="Portfolio Work" className="banner-image" />
+                  <ProtectedImage src="/images/landscape/cosplay2-landscape.jpg" alt="Portfolio Work" className="banner-image" />
+                  <ProtectedImage src="/images/landscape/physique3-landscape.jpg" alt="Portfolio Work" className="banner-image" />
+                  <ProtectedImage src="/images/landscape/modeling3-landscape.jpg" alt="Portfolio Work" className="banner-image" />
+                  <ProtectedImage src="/images/landscape/cosplay3-landscape.jpg" alt="Portfolio Work" className="banner-image" />
+                  {/* Duplicate images for seamless loop */}
+                  <ProtectedImage src="/images/landscape/physique1-landscape.jpg" alt="Portfolio Work" className="banner-image" />
+                  <ProtectedImage src="/images/landscape/modeling1-landscape.jpg" alt="Portfolio Work" className="banner-image" />
+                  <ProtectedImage src="/images/landscape/cosplay1-landscape.jpg" alt="Portfolio Work" className="banner-image" />
+                </div>
+              </div>
+              <div className="portfolio-banner-overlay">
+                <h2>Featured Work</h2>
+                <p>Showcasing our latest photography</p>
+              </div>
+            </section>
+
             <p
               className="fade-in fade-in-delay-2 mt-3"
               style={{ maxWidth: '500px', margin: '2rem auto 0' }}
@@ -43,7 +70,7 @@ const Home = () => {
             {/* Physique */}
             <div className="image-overlay fade-in">
               <img
-                src="/images/physique1.jpg"
+                src="/images/physique/physique1.jpg"
                 alt="Physique Photography"
                 className="atmospheric-image"
               />
@@ -64,7 +91,7 @@ const Home = () => {
             {/* Modeling */}
             <div className="image-overlay fade-in fade-in-delay-1">
               <img
-                src="/images/modeling1.jpg"
+                src="/images/modeling/modeling1.jpg"
                 alt="Modeling Photography"
                 className="atmospheric-image"
               />
@@ -85,7 +112,7 @@ const Home = () => {
             {/* Cosplay */}
             <div className="image-overlay fade-in fade-in-delay-2">
               <img
-                src="/images/cosplay1.jpg"
+                src="/images/cosplay/cosplay1.jpg"
                 alt="Cosplay Photography"
                 className="atmospheric-image"
               />

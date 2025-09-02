@@ -5,40 +5,79 @@ const photocategories = [
   {
     name: 'Physique',
     images: [
-      '/images/physique1.jpg',
-      '/images/physique2.jpg',
-      '/images/physique3.jpg',
-      '/images/physique1.jpg', // Add more images for gallery
-      '/images/physique2.jpg',
-      '/images/physique3.jpg',
-      '/images/physique1.jpg',
-      '/images/physique2.jpg',
+      '/images/physique/physique1.jpg',
+      '/images/physique/physique2.jpg',
+      '/images/physique/physique3.jpg',
+      '/images/physique/physique4.jpg', // Add more images for gallery
+      '/images/physique/physique5.jpg',
+      '/images/physique/physique6.jpg',
+      '/images/physique/physique7.jpg',
+      '/images/physique/physique8.jpg',
     ],
   },
   {
     name: 'Modeling',
     images: [
-      '/images/modeling1.jpg',
-      '/images/modeling2.jpg',
-      '/images/modeling3.jpg',
-      '/images/modeling1.jpg', // Add more images for gallery
-      '/images/modeling2.jpg',
-      '/images/modeling3.jpg',
-      '/images/modeling1.jpg',
-      '/images/modeling2.jpg',
+      '/images/modeling/modeling1.jpg',
+      '/images/modeling/modeling2.jpg',
+      '/images/modeling/modeling3.jpg',
+      '/images/modeling/modeling4.jpg', // Add more images for gallery
+      '/images/modeling/modeling5.jpg',
+      '/images/modeling/modeling6.jpg',
+      '/images/modeling/modeling7.jpg',
+      '/images/modeling/modeling8.jpg',
     ],
   },
   {
     name: 'Cosplay',
     images: [
-      '/images/cosplay1.jpg',
-      '/images/cosplay2.jpg',
-      '/images/cosplay3.jpg',
-      '/images/cosplay1.jpg', // Add more images for gallery
-      '/images/cosplay2.jpg',
-      '/images/cosplay3.jpg',
-      '/images/cosplay1.jpg',
-      '/images/cosplay2.jpg',
+      '/images/cosplay/cosplay1.jpg',
+      '/images/cosplay/cosplay2.jpg',
+      '/images/cosplay/cosplay3.jpg',
+      '/images/cosplay/cosplay4.jpg', // Add more images for gallery
+      '/images/cosplay/cosplay5.jpg',
+      '/images/cosplay/cosplay6.jpg',
+      '/images/cosplay/cosplay7.jpg',
+      '/images/cosplay/cosplay8.jpg',
+    ],
+  },
+  {
+    name: 'Wildlife',
+    images: [
+      '/images/wildlife/wildlife1.jpg',
+      '/images/wildlife/wildlife2.jpg',
+      '/images/wildlife/wildlife3.jpg',
+      '/images/wildlife/wildlife4.jpg',
+      '/images/wildlife/wildlife5.jpg',
+      '/images/wildlife/wildlife6.jpg',
+      '/images/wildlife/wildlife7.jpg',
+      '/images/wildlife/wildlife8.jpg',
+    ],
+  },
+  {
+    name: 'Event',
+    images: [
+      '/images/event/event1.jpg',
+      '/images/event/event2.jpg',
+      '/images/event/event3.jpg',
+      '/images/event/event4.jpg',
+      '/images/event/event5.jpg',
+      '/images/event/event6.jpg',
+      '/images/event/event7.jpg',
+      '/images/event/event8.jpg',
+    ],
+  },
+  {
+    name: 'Portrait',
+    images: [
+      '/images/portrait/portrait1.jpg',
+      '/images/portrait/portrait2.jpg',
+      '/images/portrait/portrait3.jpg',
+      '/images/portrait/portrait4.jpg',
+      '/images/portrait/portrait5.jpg',
+      '/images/portrait/portrait6.jpg',
+      '/images/portrait/portrait7.jpg',
+      '/images/portrait/portrait8.jpg',
     ],
   },
 ];

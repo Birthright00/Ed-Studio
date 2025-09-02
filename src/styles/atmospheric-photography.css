@@ -82,6 +82,7 @@ p {
   align-items: center;
   justify-content: center;
   position: relative;
+  padding-top: 120px; /* Add space for fixed nav */
 }
 
 /* Atmospheric Background */
@@ -144,6 +145,17 @@ p {
   object-fit: cover;
   transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   filter: brightness(0.9) contrast(1.1);
+  /* Image Protection */
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+  pointer-events: none;
 }
 
 .atmospheric-image:hover {
@@ -365,4 +377,106 @@ p {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+/* Auto-scrolling Portfolio Banner */
+.portfolio-banner-section {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+  margin: 4rem 0;
+  background: #000;
+}
+
+.portfolio-banner-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.portfolio-banner-track {
+  display: flex;
+  height: 100%;
+  width: calc(300% + 600px);
+  animation: scrollBanner 30s linear infinite;
+}
+
+.banner-image {
+  flex: 0 0 400px;
+  height: 100%;
+  object-fit: cover;
+  margin-right: 2px;
+  filter: brightness(0.8) contrast(1.1);
+  transition: filter 0.3s ease;
+  /* Image Protection */
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+  pointer-events: none;
+}
+
+.portfolio-banner-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 10;
+  pointer-events: none;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 2rem 3rem;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.portfolio-banner-overlay h2 {
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 0.15em;
+}
+
+.portfolio-banner-overlay p {
+  color: #cccccc;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  margin: 0;
+}
+
+@keyframes scrollBanner {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.33%);
+  }
+}
+
+.portfolio-banner-section:hover .portfolio-banner-track {
+  animation-play-state: paused;
+}
+
+@media (max-width: 768px) {
+  .portfolio-banner-section {
+    height: 250px;
+  }
+  
+  .banner-image {
+    flex: 0 0 300px;
+  }
+  
+  .portfolio-banner-overlay {
+    padding: 1.5rem 2rem;
+  }
+  
+  .portfolio-banner-overlay h2 {
+    font-size: 1.5rem;
+  }
 }
