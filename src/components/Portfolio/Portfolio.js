@@ -178,7 +178,6 @@ const Portfolio = () => {
                   />
                   <div className="category-overlay-content">
                     <h2>{category.name}</h2>
-                    <p>{category.images.length} Images</p>
                     <div className="category-arrow">→</div>
                   </div>
                 </div>
