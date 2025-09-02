@@ -1,11 +1,37 @@
 import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    setIsSubmitting(true);
+    setSubmitStatus('');
+
+    try {
+      const result = await emailjs.send(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+          to_email: 'tang.edward.business@gmail.com'
+        },
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+      );
+
+      setSubmitStatus('Message sent successfully!');
+      setFormData({ name: '', email: '', message: '' });
+    } catch (error) {
+      setSubmitStatus('Failed to send message. Please try again.');
+      console.error('EmailJS error:', error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -165,12 +191,25 @@ const Contact = () => {
                 />
               </div>
               
-              <button type="submit" className="btn-atmospheric" style={{
+              <button type="submit" className="btn-atmospheric" disabled={isSubmitting} style={{
                 width: '100%',
-                padding: '1.25rem'
+                padding: '1.25rem',
+                opacity: isSubmitting ? 0.7 : 1
               }}>
-                Send Message
+                {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>
+              
+              {submitStatus && (
+                <div style={{
+                  marginTop: '1rem',
+                  padding: '1rem',
+                  textAlign: 'center',
+                  color: submitStatus.includes('successfully') ? '#4ade80' : '#f87171',
+                  fontSize: '0.9rem'
+                }}>
+                  {submitStatus}
+                </div>
+              )}
             </form>
           </div>
         </div>
