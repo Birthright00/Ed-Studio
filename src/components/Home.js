@@ -42,7 +42,7 @@ const Home = () => {
               </div>
               <div className="portfolio-banner-overlay">
                 <h2>Featured Work</h2>
-                <p>Showcasing our latest photography</p>
+                <p>Showcasing my latest photography</p>
               </div>
             </section>
 
@@ -149,7 +149,7 @@ const Home = () => {
             >
               Every photograph tells a story. Through careful composition,
               lighting, and an eye for authentic moments, we create images that
-              transcend the ordinary. Our work focuses on capturing the natural
+              transcend the ordinary. The work focuses on capturing the natural
               beauty, strength, and character that makes each subject unique.
             </p>
           </div>
