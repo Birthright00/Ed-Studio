@@ -12,7 +12,6 @@ const photocategories = [
       '/images/physique/physique5.jpg',
       '/images/physique/physique6.jpg',
       '/images/physique/physique7.jpg',
-      '/images/physique/physique8.jpg',
     ],
   },
   {
@@ -25,20 +24,18 @@ const photocategories = [
       '/images/modeling/modeling5.jpg',
       '/images/modeling/modeling6.jpg',
       '/images/modeling/modeling7.jpg',
-      '/images/modeling/modeling8.jpg',
     ],
   },
   {
-    name: 'Cosplay',
+    name: 'Boudoir',
     images: [
-      '/images/cosplay/cosplay1.jpg',
-      '/images/cosplay/cosplay2.jpg',
-      '/images/cosplay/cosplay3.jpg',
-      '/images/cosplay/cosplay4.jpg', // Add more images for gallery
-      '/images/cosplay/cosplay5.jpg',
-      '/images/cosplay/cosplay6.jpg',
-      '/images/cosplay/cosplay7.jpg',
-      '/images/cosplay/cosplay8.jpg',
+      '/images/boudoir/boudoir1.jpg',
+      '/images/boudoir/boudoir2.jpg',
+      '/images/boudoir/boudoir3.jpg',
+      '/images/boudoir/boudoir4.jpg', // Add more images for gallery
+      '/images/boudoir/boudoir5.jpg',
+      '/images/boudoir/boudoir6.jpg',
+      '/images/boudoir/boudoir7.jpg',
     ],
   },
   {
@@ -51,7 +48,6 @@ const photocategories = [
       '/images/wildlife/wildlife5.jpg',
       '/images/wildlife/wildlife6.jpg',
       '/images/wildlife/wildlife7.jpg',
-      '/images/wildlife/wildlife8.jpg',
     ],
   },
   {
@@ -64,7 +60,6 @@ const photocategories = [
       '/images/event/event5.jpg',
       '/images/event/event6.jpg',
       '/images/event/event7.jpg',
-      '/images/event/event8.jpg',
     ],
   },
   {
@@ -77,7 +72,6 @@ const photocategories = [
       '/images/portrait/portrait5.jpg',
       '/images/portrait/portrait6.jpg',
       '/images/portrait/portrait7.jpg',
-      '/images/portrait/portrait8.jpg',
     ],
   },
 ];

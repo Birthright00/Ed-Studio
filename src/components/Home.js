@@ -50,7 +50,7 @@ const Home = () => {
               className="fade-in fade-in-delay-2 mt-3"
               style={{ maxWidth: '500px', margin: '2rem auto 0' }}
             >
-              Specializing in physique, modeling, and cosplay photography.
+              Specializing in physique, modeling, and boudoir photography.
               Creating atmospheric portraits that capture the essence of beauty
               and character.
             </p>
@@ -112,8 +112,8 @@ const Home = () => {
             {/* Cosplay */}
             <div className="image-overlay fade-in fade-in-delay-2">
               <img
-                src="/images/cosplay/cosplay1.jpg"
-                alt="Cosplay Photography"
+                src="/images/boudoir/boudoir1.jpg"
+                alt="Boudoir Photography"
                 className="atmospheric-image"
               />
               <div
@@ -125,7 +125,7 @@ const Home = () => {
                 }}
               >
                 <h3 style={{ color: '#ffffff', fontSize: '1.5rem' }}>
-                  Cosplay
+                  Boudoir
                 </h3>
               </div>
             </div>

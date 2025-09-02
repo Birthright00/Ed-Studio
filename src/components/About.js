@@ -39,9 +39,9 @@ const About = () => {
                 appearance, but essence.
               </p>
               <p className="fade-in fade-in-delay-2 mb-4" style={{fontSize: '1.1rem', lineHeight: '1.7'}}>
-                My specialization in physique, modeling, and cosplay photography stems from a deep appreciation 
+                My specialization in physique, modeling, cosplay, and boudoir photography stems from a deep appreciation 
                 for the artistry in each discipline. Whether showcasing the dedication of an athlete, 
-                the elegance of a model, or the creativity of a cosplayer, each image tells a unique story.
+                the elegance of a model, the creativity of a cosplayer, or the intimacy of boudoir work, each image tells a unique story.
               </p>
             </div>
           </div>
