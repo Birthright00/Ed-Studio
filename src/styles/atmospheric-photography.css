@@ -185,6 +185,26 @@ p {
   opacity: 1;
 }
 
+.category-label {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.category-label h3 {
+  color: #ffffff;
+  font-size: 1.5rem;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5); /* Improved readability */
+  transform: translateY(0);
+  transition: transform 0.3s ease;
+}
+
+.image-overlay:hover .category-label h3 {
+  transform: translateY(-5px);
+}
+
 /* Navigation Styles */
 .minimal-nav {
   position: fixed;
@@ -241,6 +261,26 @@ p {
   transition: color 0.3s ease;
   text-transform: uppercase;
   letter-spacing: 0.15em;
+}
+
+.nav-link-minimal::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: -4px;
+  left: 0;
+  background-color: #ffffff;
+  transition: width 0.3s ease;
+}
+
+.nav-link-minimal:hover::after,
+.nav-link-minimal.active::after {
+  width: 100%;
+}
+
+.nav-link-minimal.active {
+  color: #ffffff;
 }
 
 .nav-link-minimal:hover {

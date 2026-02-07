@@ -17,9 +17,7 @@ const About = () => {
               fontSize: '1.2rem',
               lineHeight: '1.8'
             }}>
-              Ed Studio represents a vision of photography that goes beyond mere documentation. 
-              Belief in the power of light, shadow, and human intersect and form to create images that 
-              resonate on a deeper level.
+              Ed Studio represents a vision of photography focused on capturing the unique character of every subject.
             </p>
           </div>
         </div>
@@ -33,15 +31,9 @@ const About = () => {
               My Approach
             </h2>
             <div style={{maxWidth: '900px', margin: '0 auto'}}>
-              <p className="fade-in fade-in-delay-1 mb-4" style={{fontSize: '1.1rem', lineHeight: '1.7'}}>
-                Every session begins with understanding the subject's story, their vision, and the message they want to convey. 
-                Through careful attention to lighting, composition, and atmosphere, I want to craft images that capture not just 
-                appearance, but essence.
-              </p>
               <p className="fade-in fade-in-delay-2 mb-4" style={{fontSize: '1.1rem', lineHeight: '1.7'}}>
-                My specialization in physique, modeling, cosplay, and boudoir photography stems from a deep appreciation 
-                for the artistry in each discipline. Whether showcasing the dedication of an athlete, 
-                the elegance of a model, the creativity of a cosplayer, or the intimacy of boudoir work, each image tells a unique story.
+                Specializing in physique, modeling, cosplay, and boudoir photography. Whether showcasing the dedication of an athlete, 
+                the elegance of a model, or the creativity of a cosplayer, I strive to produce high-quality imagery.
               </p>
             </div>
           </div>

@@ -26,6 +26,7 @@ function App() {
 
   useEffect(() => {
     // Initialize loading bar
+    /* global ldBar */
     const loadingBar = new ldBar("#loading-bar");
     let progress = 0;
 
@@ -36,42 +37,38 @@ function App() {
 
       if (progress >= 100) {
         clearInterval(interval); // Stop when 100% is reached
-        setLoading(false); // Set loading to false
+        setTimeout(() => setLoading(false), 200); // Short delay before fading out
       }
-    }, 300); // Increment every 300ms
+    }, 150); // Increment every 150ms
 
     return () => clearInterval(interval); // Cleanup interval
   }, []);
 
   return (
     <Router>
-      {/* Show loading bar while loading */}
-      {loading ? (
-        <ImageProtection>
-          <div id="loading-container">
-            <div id="loading-bar" className="ldBar label-center"></div>
-          </div>
-        </ImageProtection>
-      ) : (
-        <ImageProtection>
-          {/* Atmospheric background */}
-          <div className="atmospheric-bg"></div>
-          {/* Scroll to top on route change */}
-          <ScrollToTop />
-          {/* Scroll animation handler */}
-          <ScrollAnimation />
-          {/* Main app layout */}
-          <Header />
-          <main>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/portfolio" element={<Portfolio />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/contact" element={<Contact />} />
-            </Routes>
-          </main>
-        </ImageProtection>
-      )}
+      <ImageProtection>
+        {/* Loading overlay */}
+        <div id="loading-container" className={!loading ? 'hidden' : ''}>
+          <div id="loading-bar" className="ldBar label-center"></div>
+        </div>
+
+        {/* Atmospheric background */}
+        <div className="atmospheric-bg"></div>
+        {/* Scroll to top on route change */}
+        <ScrollToTop />
+        {/* Scroll animation handler */}
+        <ScrollAnimation />
+        {/* Main app layout */}
+        <Header />
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </main>
+      </ImageProtection>
     </Router>
   );
 }

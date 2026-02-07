@@ -10,7 +10,7 @@ const Home = () => {
         <div className="container">
           <div className="text-center">
             <h1 className="fade-in">Ed Studio</h1>
-            <pI
+            <p
               className="fade-in fade-in-delay-1 mt-2"
               style={{
                 fontSize: '1.2rem',
@@ -19,7 +19,7 @@ const Home = () => {
               }}
             >
               Photography
-            </pI>
+            </p>
 
             {/* Auto-scrolling Portfolio Banner */}
             <section className="portfolio-banner-section">
@@ -51,8 +51,6 @@ const Home = () => {
               style={{ maxWidth: '500px', margin: '2rem auto 0' }}
             >
               Specializing in physique, modeling, and boudoir photography.
-              Creating atmospheric portraits that capture the essence of beauty
-              and character.
             </p>
             <div className="fade-in fade-in-delay-3 mt-4">
               <Link to="/portfolio" className="btn-atmospheric">
@@ -74,17 +72,8 @@ const Home = () => {
                 alt="Physique Photography"
                 className="atmospheric-image"
               />
-              <div
-                style={{
-                  position: 'absolute',
-                  bottom: '2rem',
-                  left: '2rem',
-                  zIndex: 10,
-                }}
-              >
-                <h3 style={{ color: '#ffffff', fontSize: '1.5rem' }}>
-                  Physique
-                </h3>
+              <div className="category-label">
+                <h3>Physique</h3>
               </div>
             </div>
 
@@ -95,66 +84,28 @@ const Home = () => {
                 alt="Modeling Photography"
                 className="atmospheric-image"
               />
-              <div
-                style={{
-                  position: 'absolute',
-                  bottom: '2rem',
-                  left: '2rem',
-                  zIndex: 10,
-                }}
-              >
-                <h3 style={{ color: '#ffffff', fontSize: '1.5rem' }}>
-                  Modeling
-                </h3>
+              <div className="category-label">
+                <h3>Modeling</h3>
               </div>
             </div>
 
-            {/* Cosplay */}
+            {/* Boudoir */}
             <div className="image-overlay fade-in fade-in-delay-2">
               <img
                 src="/images/boudoir/boudoir1.jpg"
                 alt="Boudoir Photography"
                 className="atmospheric-image"
               />
-              <div
-                style={{
-                  position: 'absolute',
-                  bottom: '2rem',
-                  left: '2rem',
-                  zIndex: 10,
-                }}
-              >
-                <h3 style={{ color: '#ffffff', fontSize: '1.5rem' }}>
-                  Boudoir
-                </h3>
+              <div className="category-label">
+                <h3>Boudoir</h3>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Philosophy Section */}
-      <section className="section">
-        <div className="container">
-          <div className="text-center">
-            <h2 className="fade-in mb-4">Philosophy</h2>
-            <p
-              className="fade-in fade-in-delay-1"
-              style={{
-                maxWidth: '700px',
-                margin: '0 auto',
-                fontSize: '1.1rem',
-                lineHeight: '1.8',
-              }}
-            >
-              Every photograph tells a story. Through careful composition,
-              lighting, and an eye for authentic moments, we create images that
-              transcend the ordinary. The work focuses on capturing the natural
-              beauty, strength, and character that makes each subject unique.
-            </p>
-          </div>
-        </div>
-      </section>
+      {/* Philosophy Section Removed */}
+
     </>
   );
 };
