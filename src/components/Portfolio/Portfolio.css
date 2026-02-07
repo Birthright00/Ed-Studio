@@ -237,6 +237,11 @@
 }
 
 /* Masonry Layout */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 .masonry-grid {
   columns: 3 300px;
   column-gap: 1.5rem;

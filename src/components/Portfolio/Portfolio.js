@@ -92,7 +92,6 @@ const Portfolio = () => {
     // Gallery View
     return (
       <>
-        <ScrollToTop />
         <section className="portfolio-header-section">
           <div className="container">
             <div className="portfolio-header-content">
