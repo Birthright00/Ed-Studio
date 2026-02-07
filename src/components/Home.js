@@ -16,6 +16,8 @@ const Home = () => {
                 fontSize: '1.2rem',
                 letterSpacing: '0.1em',
                 textTransform: 'uppercase',
+                maxWidth: '600px', // Ensure it doesn't span too wide if we want centering logic to hold for text
+                margin: '2rem auto 0' // Center the block itself
               }}
             >
               Photography
@@ -25,6 +27,7 @@ const Home = () => {
             <section className="portfolio-banner-section">
               <div className="portfolio-banner-container">
                 <div className="portfolio-banner-track">
+                  {/* First Set of Images */}
                   <ProtectedImage src="/images/landscape/physique1-landscape.jpg" alt="Portfolio Work" className="banner-image" />
                   <ProtectedImage src="/images/landscape/modeling1-landscape.jpg" alt="Portfolio Work" className="banner-image" />
                   <ProtectedImage src="/images/landscape/cosplay1-landscape.jpg" alt="Portfolio Work" className="banner-image" />
@@ -34,10 +37,17 @@ const Home = () => {
                   <ProtectedImage src="/images/landscape/physique3-landscape.jpg" alt="Portfolio Work" className="banner-image" />
                   <ProtectedImage src="/images/landscape/modeling3-landscape.jpg" alt="Portfolio Work" className="banner-image" />
                   <ProtectedImage src="/images/landscape/cosplay3-landscape.jpg" alt="Portfolio Work" className="banner-image" />
-                  {/* Duplicate images for seamless loop */}
+                  
+                  {/* Duplicate Set for Seamless Loop */}
                   <ProtectedImage src="/images/landscape/physique1-landscape.jpg" alt="Portfolio Work" className="banner-image" />
                   <ProtectedImage src="/images/landscape/modeling1-landscape.jpg" alt="Portfolio Work" className="banner-image" />
                   <ProtectedImage src="/images/landscape/cosplay1-landscape.jpg" alt="Portfolio Work" className="banner-image" />
+                  <ProtectedImage src="/images/landscape/physique2-landscape.jpg" alt="Portfolio Work" className="banner-image" />
+                  <ProtectedImage src="/images/landscape/modeling2-landscape.jpg" alt="Portfolio Work" className="banner-image" />
+                  <ProtectedImage src="/images/landscape/cosplay2-landscape.jpg" alt="Portfolio Work" className="banner-image" />
+                  <ProtectedImage src="/images/landscape/physique3-landscape.jpg" alt="Portfolio Work" className="banner-image" />
+                  <ProtectedImage src="/images/landscape/modeling3-landscape.jpg" alt="Portfolio Work" className="banner-image" />
+                  <ProtectedImage src="/images/landscape/cosplay3-landscape.jpg" alt="Portfolio Work" className="banner-image" />
                 </div>
               </div>
               <div className="portfolio-banner-overlay">

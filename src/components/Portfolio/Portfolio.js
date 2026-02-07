@@ -92,39 +92,38 @@ const Portfolio = () => {
     // Gallery View
     return (
       <>
-        <section className="section" style={{paddingTop: '8rem'}}>
+        <ScrollToTop />
+        <section className="portfolio-header-section">
           <div className="container">
-            <div className="text-center">
+            <div className="portfolio-header-content">
               <button 
-                onClick={handleBackToCategories}
-                className="btn-atmospheric"
-                style={{marginBottom: '2rem'}}
+                onClick={() => setSelectedCategory(null)}
+                className="back-nav-btn fade-in"
               >
-                ← Back to Categories
+                <span className="arrow">←</span> All Collections
               </button>
-              <h1 className="fade-in mb-3">
-                {selectedCategory.name}
-              </h1>
-              <p className="fade-in fade-in-delay-1" style={{
-                maxWidth: '600px', 
-                margin: '0 auto',
-                fontSize: '1.1rem'
-              }}>
-                A curated collection of {selectedCategory.name.toLowerCase()} photography showcasing artistry and elegance.
-              </p>
+              
+              <div className="text-center mt-4">
+                <h1 className="fade-in category-title">
+                  {selectedCategory.name}
+                </h1>
+                <div className="title-separator fade-in"></div>
+                <p className="fade-in fade-in-delay-1 category-description">
+                  A curated collection of {selectedCategory.name.toLowerCase()} photography showcasing artistry and elegance.
+                </p>
+              </div>
             </div>
           </div>
         </section>
 
         {/* Gallery Grid */}
-        <section className="section">
+        <section className="section pt-0">
           <div className="container">
-            <div className="gallery-grid">
+            <div className="masonry-grid">
               {selectedCategory.images.map((image, index) => (
-                <div key={index} className={`gallery-item fade-in fade-in-delay-${Math.min(Math.floor(index / 2) + 1, 3)}`}>
-                  <div className="image-overlay">
-                    <img src={image} alt={`${selectedCategory.name} ${index + 1}`} className="atmospheric-image" />
-                  </div>
+                <div key={index} className={`masonry-item fade-in fade-in-delay-${Math.min(Math.floor(index / 2) + 1, 3)}`}>
+                  <img src={image} alt={`${selectedCategory.name} ${index + 1}`} className="masonry-image" />
+                  <div className="masonry-overlay"></div>
                 </div>
               ))}
             </div>

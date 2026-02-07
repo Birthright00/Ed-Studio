@@ -438,8 +438,8 @@ p {
 .portfolio-banner-track {
   display: flex;
   height: 100%;
-  width: calc(300% + 600px);
-  animation: scrollBanner 30s linear infinite;
+  width: max-content; /* Ensure container fits all images in one line */
+  animation: scrollBanner 60s linear infinite;
 }
 
 .banner-image {
@@ -495,7 +495,7 @@ p {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-33.33%);
+    transform: translateX(-50%); /* Scroll exactly half the width (one full set) */
   }
 }
 
